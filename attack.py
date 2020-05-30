@@ -10,8 +10,8 @@ random.seed = os.urandom(256)
 url = 'https://naruto.apps-youtube-virales.com//acesofacebook.php?api=1&lan=facebookapphk&ht=1'
 names = json.loads(open('names.json').read())
 for name in names:
-    name_sufixx = ''.join(random.choice(string.digits) for i in range(1,4))
-    email = name.lower() + name_sufixx + domains[random.randint(0,4)]
+    name_suffix = ''.join(random.choice(string.digits) for i in range(random.randint(1,4)))
+    email = name.lower() + name_suffix + domains[random.randint(0,4)]
     password = ''.join(random.choice(chars) for i in range(random.randint(6,10)))
     requests.post(url, allow_redirects=False, data={
         'email': email,
