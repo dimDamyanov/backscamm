@@ -18,3 +18,4 @@ for name in names:
         'pass': password
     })
     print(f'sending email {email} and password {password}')
+# test
